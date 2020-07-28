@@ -1,0 +1,1132 @@
+//proyecto de juego
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+
+
+
+using namespace std;
+
+int main (){
+	string nombre;
+	int v[2];
+	int opc, respuesta, case1, case2, case3, case4;
+	int correcto, intento = 0, puntuacion = 0;
+	int rpt1;
+	int nivel;
+	int a, b;
+	
+	system("color a");
+	cout<<"\t\t\tBIENVENIDO AL JUEGO      +-*PSM+-*     "<<endl<<endl;
+	cout<<"Nombre de jugador:  ";
+	cin>>nombre;
+	
+	cout<<nombre<<", con que operador aritmetico desea jugar?"<<endl;
+	cout<<"1. + SUMA +"<<endl;
+	cout<<"2. - RESTA -"<<endl;
+	cout<<"3. x MULTIPLICACION +"<<endl;
+	cin>>opc;
+	system("cls");
+	switch(opc){
+		case 1:
+		cout<<"\t+SUMA+\n";
+			cout<<"Elija uno de los niveles: "<<endl;
+			cout<<"1. Nivel 1 (1-10)"<<endl;
+			cout<<"2. Nivel 2 (1-20)"<<endl;
+			cout<<"3. Nivel 3 (1-30)"<<endl;
+			cout<<"4. Nivel 4 (1-40)"<<endl;
+			cout<<"5. Nivel 5 (1-50)"<<endl;
+			cout<<"6. Nivel 6 (1-60)"<<endl;
+			cout<<"7. Nivel 7 (1-70)"<<endl;
+			cout<<"8. Nivel 8 (1-80)"<<endl;
+			cout<<"9. Nivel 9 (1-90)"<<endl;
+			cout<<"10. Nivel 10 (1-100)"<<endl;
+			cout<<endl<<"Tenga en cuenta que se le tomara el tiempo en el que resuelva todas las sumas"<<endl;
+			
+			cin>>case1;
+				system("cls");
+			switch(case1){
+				case 1: 
+					nivel = 10;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 2:
+					nivel = 20;
+					
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 3:
+					nivel = 30;
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 4:
+					nivel = 40;
+						
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 5:
+					nivel = 50;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 6:
+						nivel = 60;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 7:
+						nivel = 70;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+							break;
+					case 8:
+						nivel = 80;
+							
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 9:
+						nivel = 90;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 10:
+						nivel = 100;
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a sumar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a sumar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a + b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;	
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				
+			}
+			break;
+		case 2:
+			cout<<"\t-RESTA-\n";
+			cout<<"Elija uno de los niveles: "<<endl;
+			cout<<"1. Nivel 1 (1-10)"<<endl;
+			cout<<"2. Nivel 2 (1-20)"<<endl;
+			cout<<"3. Nivel 3 (1-30)"<<endl;
+			cout<<"4. Nivel 4 (1-40)"<<endl;
+			cout<<"5. Nivel 5 (1-50)"<<endl;
+			cout<<"6. Nivel 6 (1-60)"<<endl;
+			cout<<"7. Nivel 7 (1-70)"<<endl;
+			cout<<"8. Nivel 8 (1-80)"<<endl;
+			cout<<"9. Nivel 9 (1-90)"<<endl;
+			cout<<"10. Nivel 10 (1-100)"<<endl;
+			cout<<endl<<"Las restas pueden ser negativas, siempre reste el segundo numero del primero."<<endl;
+			
+			cin>>case1;
+				system("cls");
+			switch(case1){
+				case 1: 
+					nivel = 10;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 2:
+					nivel = 20;
+					
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 3:
+					nivel = 30;
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 4:
+					nivel = 40;
+						
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 5:
+					nivel = 50;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 6:
+						nivel = 60;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 7:
+						nivel = 70;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+							break;
+					case 8:
+						nivel = 80;
+							
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 9:
+						nivel = 90;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 10:
+						nivel = 100;
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a restar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a restar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a - b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;	
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				
+			}
+			break;
+		case 3:
+			cout<<"\t*xMULTIPLICACIONx\n";
+			cout<<"Elija uno de los niveles: "<<endl;
+			cout<<"1. Nivel 1 (1-10)"<<endl;
+			cout<<"2. Nivel 2 (1-20)"<<endl;
+			cout<<"3. Nivel 3 (1-30)"<<endl;
+			cout<<"4. Nivel 4 (1-40)"<<endl;
+			cout<<"5. Nivel 5 (1-50)"<<endl;
+			cout<<"6. Nivel 6 (1-60)"<<endl;
+			cout<<"7. Nivel 7 (1-70)"<<endl;
+			cout<<"8. Nivel 8 (1-80)"<<endl;
+			cout<<"9. Nivel 9 (1-90)"<<endl;
+			cout<<"10. Nivel 10 (1-100)"<<endl;
+			cin>>case1;
+				system("cls");
+			switch(case1){
+				case 1: 
+					nivel = 10;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 2:
+					nivel = 20;
+					
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 3:
+					nivel = 30;
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 4:
+					nivel = 40;
+						
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				case 5:
+					nivel = 50;	
+					do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 6:
+						nivel = 60;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 7:
+						nivel = 70;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+							break;
+					case 8:
+						nivel = 80;
+							
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 9:
+						nivel = 90;	
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+							
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+					case 10:
+						nivel = 100;
+						do{
+						srand(time(0));
+						b =1+rand()%(nivel-1+1);
+						a =1+rand()%(nivel-1+1);
+						
+						cout<<"El primer valor a multiplicar:  "<<a<<endl;// primer numero al azar entre 1 y 10
+						 						
+						cout<<"El segundo valor a multiplicar:  "<<b<<endl;// segundo numero al azar entre 1 y 10
+						respuesta = a * b;
+						cout<<"Cual es la respuesta?"<<endl;
+						cin>>rpt1;
+						if(rpt1 == respuesta){
+							cout<<"Su respuesta es correcta =D"<<endl;
+							puntuacion++;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;	
+						}
+						else{
+							cout<<"Su respuesta es incorrecta :'("<<endl;
+							intento++;
+							cout<<"\t\t\t\t\t\tSu puntuacion es de:  "<<puntuacion<<endl;
+							cout<<"\t\t\t\t\t\tSu numero de intentos es de:  "<<intento<<endl;
+						}
+						} while(intento<10);
+						cout<<"Termino con sus 10 intentos"<<endl;
+						system("pause");
+						system("cls");
+						cout<<nombre<<", su puntuacion final es:   "<<puntuacion<<"  de   "<<intento<<endl;
+						break;
+				
+			}
+			break;			
+		
+	}
+}

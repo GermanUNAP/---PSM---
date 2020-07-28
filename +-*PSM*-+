@@ -1,4 +1,4 @@
-/proyecto 1: contador de palabras repetidas
+//JuegoPSM
 
 #include <iostream>
 #include <cstdlib>

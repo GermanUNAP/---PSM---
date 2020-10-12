@@ -1,0 +1,350 @@
+// mejora del juego
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <math.h>
+#include <conio.h>
+
+using namespace std;
+
+void mostrar_niv(){
+			
+			cout<<"\tElija uno de los niveles: "<<endl<<endl;
+			cout<<" Nivel 1  (1-10)"<<endl;
+			cout<<" Nivel 2  (1-20)"<<endl;
+			cout<<" Nivel 3  (1-30)"<<endl;
+			cout<<" Nivel 4  (1-40)"<<endl;
+			cout<<" Nivel 5  (1-50)"<<endl;
+			cout<<" Nivel 6  (1-60)"<<endl;
+			cout<<" Nivel 7  (1-70)"<<endl;
+			cout<<" Nivel 8  (1-80)"<<endl;
+			cout<<" Nivel 9  (1-90)"<<endl;
+			cout<<" Nivel 10 (1-100)"<<endl<<endl;
+			cout<<"Recurde que se le tomara el tiempo en que demore en hacer todas las operaciones"<<endl;
+}
+void frases(int puntos, string nombre){
+	
+	if(puntos<=5){
+			cout<<endl<<endl<<"\t"<<nombre<<", obtuviste menos o igual a 5 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<endl<<"'No hay rama de la matematica, por lo abstracta que sea , que no pueda aplicarse algun dia a los fenomenos del mundo real'"<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tLobachevski";
+		}
+		if(puntos==6){
+			cout<<endl<<endl<<"\t"<<nombre<<", obtuviste 6 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<"'La ciencia se compone de errores, que, a su vez, son los pasos hacia la verdad''"<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tJulio Verne";
+		}
+		if(puntos==7){
+			cout<<endl<<endl<<"\t"<<nombre<<", obtuviste 7 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<"'La riqueza de un hombre no se encuentra en la cantidad de dinero que posee, sino en la calidad de su conocimiento y educacion"<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tJavier Herrera";
+		}
+		if(puntos==8){
+			cout<<endl<<endl<<"\t"<<nombre<<", obtuviste 8 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<"'La matematica no se trata de numeros, ecuaciones, calculos o algoritmos: se trata de comprender."<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tJavier Herrera";
+		}
+		if(puntos==9){
+			cout<<endl<<endl<<"\t"<<nombre<<", obtuviste 9 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<"'En matematica no se deben desprecias ni los errores mas diminutos.'"<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tIsaac Newton";
+		}
+		if(puntos==10){
+			cout<<endl<<endl<<"\t Felicitaciones "<<nombre<<", obtuviste 10 puntos, recuerda lo siguiente:"<<endl;
+			cout<<endl<<"El cine es uno de los tres lenguajes universales. Los otros dos son las matematicas y la musica."<<endl;
+			cout<<endl<<"\t\t\t\t\t\t\t\tFrank Capra";
+		}
+		getch();
+}
+
+int aleatorio_Suma(int nivel, string nombre){
+		int a, b, respuesta, rpta, puntos=0, intentos=0;
+		clock_t t;
+		t = clock();
+		do
+		{	
+		srand(time(0));
+		b =1+rand()%(nivel-1+1);
+		a =1+rand()%(nivel-1+1);
+		rpta = a+b;
+		cout<<"El primer  número a sumar es:"<<a<<endl;
+		cout<<"El segundo numero a sumar es: "<<b<<endl;
+		cin>>respuesta;
+			if(respuesta == rpta){
+			puntos++;
+			intentos++;
+			}
+			else{
+			intentos++;	
+			}
+			cout<<"\t\t\t\t\t\t\t\tPuntos  : "<<puntos<<endl;
+			cout<<"\t\t\t\t\t\t\t\tIntentos: "<<intentos<<endl;
+		}while(intentos<10);
+		
+		t=clock()-t;
+		cout<<"el tiempo fue de "<<float(t)/CLOCKS_PER_SEC<< " segundos."<<endl;
+		frases(puntos, nombre);
+		}
+int aleatorio_Resta(int nivel, string nombre){
+		int a, b, respuesta, rpta, puntos=0, intentos=0;
+		clock_t t;
+		t = clock();
+		do{
+			
+		srand(time(0));
+		b =1+rand()%(nivel-1+1);
+		a =1+rand()%(nivel-1+1);
+		rpta = a-b;
+		cout<<"El primer  numero a restar es: "<<a<<endl;
+		cout<<"El segundo numero a restar es: "<<b<<endl;
+		cin>>respuesta;
+		if(respuesta == rpta){
+			puntos++;
+			intentos++;
+		}
+		else{
+			intentos++;
+		}
+		cout<<"\t\t\t\t\t\t\t\tPuntos  : "<<puntos<<endl;
+		cout<<"\t\t\t\t\t\t\t\tIntentos: "<<intentos<<endl;
+		}while(intentos<10);
+		t=clock()-t;
+		cout<<"el tiempo fue de "<<float(t)/CLOCKS_PER_SEC<< " segundos."<<endl;
+		frases(puntos, nombre);
+		}
+int aleatorio_Multiplicacion(int nivel, string nombre){
+		int a, b, respuesta, rpta, puntos=0, intentos=0;
+		clock_t t;
+		t = clock();
+		do{
+			
+		srand(time(0));
+		b =1+rand()%(nivel-1+1);
+		a =1+rand()%(nivel-1+1);
+		rpta = a*b;
+		cout<<"El primer  numero a restar es: "<<a<<endl;
+		cout<<"El segundo numero a restar es: "<<b<<endl;
+		cin>>respuesta;
+		if(respuesta == rpta){
+			puntos++;
+			intentos++;
+		}
+		else{
+			intentos++;
+		}
+		cout<<"\t\t\t\t\t\t\t\tPuntos  : "<<puntos<<endl;
+		cout<<"\t\t\t\t\t\t\t\tIntentos: "<<intentos<<endl;
+		}while(intentos<10);
+		t=clock()-t;
+		cout<<"el tiempo fue de "<<float(t)/CLOCKS_PER_SEC<< " segundos."<<endl;
+		frases(puntos, nombre);
+		}
+		
+		
+int aleatorio_Potencia(int nivel, string nombre){
+		int a, respuesta, rpta, puntos=0, intentos=0;
+		clock_t t;
+		t = clock();
+		do{
+			
+		srand(time(0));
+		a =1+rand()%(nivel-1+1);
+		
+		rpta = pow (a,3);
+		
+		cout<<"hay que elevar al cubo, el numero: "<<a<<endl;
+		
+		cin>>respuesta;
+		if(respuesta == rpta){
+			puntos++;
+			intentos++;
+		}
+		else{
+			intentos++;
+		}
+		cout<<"\t\t\t\t\t\t\t\tPuntos  : "<<puntos<<endl;
+		cout<<"\t\t\t\t\t\t\t\tIntentos: "<<intentos<<endl;
+		}while(intentos<10);
+		t=clock()-t;
+		cout<<"el tiempo fue de "<<float(t)/CLOCKS_PER_SEC<< " segundos."<<endl;
+		frases(puntos, nombre);
+		}
+
+int main(){
+	string nombre;
+	int opc;
+	int niv;
+	
+	system("color a");
+	cout<<"\t\t\tBIENVENIDO AL JUEGO      +-*PSME+-*     "<<endl<<endl;
+	cout<<"Nombre de jugador:  ";
+	cin>>nombre;
+	
+	cout<<nombre<<", con que operador aritmetico desea jugar?"<<endl;
+	cout<<"1. + SUMA +"<<endl;
+	cout<<"2. - RESTA -"<<endl;
+	cout<<"3. x MULTIPLICACION +"<<endl;
+	cout<<"4. a^3 EXPONENTES CUBICOS a^3"<<endl;
+	cin>>opc;
+	system("cls");
+	switch(opc){
+		case 1:
+			cout<<endl<<"\t\t + SUMA +"<<endl<<endl;
+			mostrar_niv();
+			cin>>niv;
+			system("cls");
+			switch (niv){
+				case 1:
+					aleatorio_Suma(10, nombre);
+					break;
+				case 2:
+					aleatorio_Suma(20, nombre);
+					break;
+				case 3:
+					aleatorio_Suma(30, nombre);
+					break;
+				case 4:
+					aleatorio_Suma(40, nombre);
+					break;
+				case 5:
+					aleatorio_Suma(50, nombre);
+					break;
+				case 6:
+					aleatorio_Suma(60, nombre);
+					break;
+				case 7:
+					aleatorio_Suma(70, nombre);
+					break;
+				case 8:
+					aleatorio_Suma(80, nombre);
+					break;
+				case 9:
+					aleatorio_Suma(90, nombre);
+					break;
+				case 10:
+					aleatorio_Suma(100, nombre);
+					break;
+			}
+			break;
+		case 2:
+			cout<<endl<<"\t\t - RESTA -"<<endl<<endl;
+			
+			mostrar_niv();
+			cout<<endl<<"Además restar siempre el primer del segundo numero, las respuestas pueden ser negativas."<<endl<<endl;
+			cin>>niv;
+			system("cls");
+			switch (niv){
+				case 1:
+					aleatorio_Resta(10,nombre);
+					break;
+				case 2:
+					aleatorio_Resta(20,nombre);
+					break;
+				case 3:
+					aleatorio_Resta(30,nombre);
+					break;
+				case 4:
+					aleatorio_Resta(40,nombre);
+					break;
+				case 5:
+					aleatorio_Resta(50,nombre);
+					break;
+				case 6:
+					aleatorio_Resta(60,nombre);
+					break;
+				case 7:
+					aleatorio_Resta(70,nombre);
+					break;
+				case 8:
+					aleatorio_Resta(80,nombre);
+					break;
+				case 9:
+					aleatorio_Resta(90,nombre);
+					break;
+				case 10:
+					aleatorio_Resta(100,nombre);
+					break;
+			}
+			break;
+		case 3:
+			cout<<endl<<"\t\t x MULTIPLICACION x"<<endl<<endl;
+			mostrar_niv();
+			cin>>niv;
+			system("cls");
+			switch(niv){
+				case 1:
+					aleatorio_Multiplicacion(10, nombre);
+					break;
+				case 2:
+					aleatorio_Multiplicacion(20, nombre);
+					break;
+				case 3:
+					aleatorio_Multiplicacion(30, nombre);
+					break;
+				case 4:
+					aleatorio_Multiplicacion(40, nombre);
+					break;
+				case 5:
+					aleatorio_Multiplicacion(50, nombre);
+					break;
+				case 6:
+					aleatorio_Multiplicacion(60, nombre);
+					break;
+				case 7:
+					aleatorio_Multiplicacion(70, nombre);
+					break;
+				case 8:
+					aleatorio_Multiplicacion(80, nombre);
+					break;
+				case 9:
+					aleatorio_Multiplicacion(90, nombre);
+					break;
+				case 10:
+					aleatorio_Multiplicacion(100, nombre);
+					break;
+			}
+			break;
+		case 4:
+			cout<<endl<<"\t\t a^3 EXPONENTES CUBICOS a^3"<<endl<<endl;
+			mostrar_niv();
+			cin>>niv;
+
+			system("cls");
+			switch (niv){
+				case 1:
+					aleatorio_Potencia(10, nombre);
+					break;
+				case 2:
+					aleatorio_Potencia(20, nombre);
+					break;
+				case 3:
+					aleatorio_Potencia(30, nombre);
+					break;
+				case 4:
+					aleatorio_Potencia(40, nombre);
+					break;
+				case 5:
+					aleatorio_Potencia(50, nombre);
+					break;
+				case 6:
+					aleatorio_Potencia(60, nombre);
+					break;
+				case 7:
+					aleatorio_Potencia(70, nombre);
+					break;
+				case 8:
+					aleatorio_Potencia(80, nombre);
+					break;
+				case 9:
+					aleatorio_Potencia(90, nombre);
+					break;
+				case 10:
+					aleatorio_Potencia(100, nombre);
+					break;
+			}
+			break;
+	}
+	
+	return 0;
+}
